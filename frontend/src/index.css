@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+/* ----------------------------------------
+   Theme Configuration
+----------------------------------------- */
+@theme {
+  /* New Color Palette - Fresh & Modern */
+  --color-brand-primary: #0d9488; /* Teal 600 */
+  --color-brand-dark: #0f172a;    /* Slate 900 */
+  --color-brand-light: #f0f9ff;   /* Sky 50 */
+  
+  /* Semantic Colors replacing Candy Colors */
+  --color-sweet-teal: #14b8a6;
+  --color-sweet-blue: #6366f1;
+  --color-sweet-orange: #f59e0b;
+  --color-sweet-red: #ef4444;
+  --color-sweet-green: #10b981;
+
+  /* Fonts */
+  --font-display: "Fredoka", "Nunito", sans-serif; /* Kept friendly but cleaner */
+  --font-body: "Inter", "Nunito", sans-serif;
+
+  /* Animations */
+  --animate-bounce-slow: bounce 3s infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+/* ----------------------------------------
+   Base styles
+----------------------------------------- */
+@layer base {
+  body {
+    @apply font-body bg-slate-50 text-slate-800 antialiased min-h-screen;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+/* ----------------------------------------
+   Components
+----------------------------------------- */
+@layer components {
+  /* Buttons */
+  .btn-primary {
+    @apply bg-teal-600 text-white font-semibold py-2.5 px-6 rounded-lg shadow-md hover:bg-teal-700 hover:shadow-lg active:transform active:scale-95 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-300 font-semibold py-2.5 px-6 rounded-lg hover:bg-slate-50 hover:text-teal-700 hover:border-teal-300 transition-all duration-200;
+  }
+
+  .btn-danger {
+    @apply bg-red-50 text-red-600 border border-red-200 font-semibold py-2.5 px-6 rounded-lg hover:bg-red-600 hover:text-white transition-all duration-200;
+  }
+
+  /* Cards & Containers */
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all duration-300;
+  }
+
+  .glass-card {
+    @apply bg-white rounded-2xl shadow-sm border border-slate-200; /* Removed heavy blur for better readability */
+  }
+
+  /* Form Elements */
+  .input-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-900 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all duration-200 placeholder:text-slate-400;
+  }
+
+  .select-field {
+    @apply w-full px-4 py-2.5 rounded-lg border border-slate-300 bg-white text-slate-900 focus:border-teal-500 focus:ring-2 focus:ring-teal-500/20 outline-none transition-all duration-200;
+  }
+
+  /* Typography Utilities */
+  .gradient-text {
+    @apply text-slate-900; /* Simplified for better readability, or use specific gradient below */
+  }
+  
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-teal-600 to-blue-600 bg-clip-text text-transparent;
+  }
+}
+
+/* ----------------------------------------
+   Utilities & Animations
+----------------------------------------- */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* ----------------------------------------
+   Scrollbar
+----------------------------------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
