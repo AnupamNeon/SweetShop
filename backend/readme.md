@@ -80,7 +80,7 @@ tests/
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/AnupamNeon/sweet-shop-api.git
+   git clone https://github.com/AnupamNeon/SweetShop.git
    cd sweet-shop-api
    ```
 
@@ -158,9 +158,12 @@ Tests cover authentication, product operations, and inventory management using J
 ## Contributing
 Contributions are welcome! Please fork the repository, create a feature branch, and submit a pull request.
 
-## License
-[Specify license here, e.g., MIT License]
-
 ---
 
-Made with 🍬 by Anupam Kumar
+<div align="center">
+
+**Made with ❤️ by [Anupam Kumar](https://github.com/AnupamNeon)**
+
+⭐ Star this repository if you found it helpful!
+
+</div>

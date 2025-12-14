@@ -106,8 +106,8 @@ src/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/AnupamNeon/sweet-shop.git
-   cd sweet-shop
+   git clone https://github.com/AnupamNeon/SweetShop.git
+   cd SweetShop
    ```
 
 2. **Install dependencies**
@@ -257,4 +257,10 @@ The app supports the following sweet categories:
 
 --- 
 
-Made with 🍬 by Anupam Kumar
+<div align="center">
+
+**Made with ❤️ by [Anupam Kumar](https://github.com/AnupamNeon)**
+
+⭐ Star this repository if you found it helpful!
+
+</div>
